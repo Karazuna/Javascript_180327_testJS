@@ -24,3 +24,12 @@ else{
 
 var id = prompt('ID 입력', ''); //초기값
 alert(id + '가 로그인함');
+
+var passwdSystem = '12345';
+var passwd = prompt('PW 입력', '');
+if(passwd == passwdSystem){
+    alert('정상 로그인!');
+}
+else{
+    alert('비밀번호 오류');
+}

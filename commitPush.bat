@@ -1,3 +1,3 @@
 git add --all
-git commit -m "JavaScript Exercise"
-git push -u origin master >> echo %date%
+git commit -m "2018-03-27, JavaScript Exercise_id&passwd"
+git push -u origin master
