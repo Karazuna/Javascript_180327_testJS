@@ -3,11 +3,15 @@
 */
 
 var myHeading = document.querySelector('h1');
-myHeading.innerHTML = 'Cloud Service<br>2018-1';
+var id = localStorage.getItem('id');
+myHeading.innerHTML = 'Cloud Service Page';
+// myHeading.innerHTML = id + 'HomePage';
 
 function getIdPw() {
     var id = prompt('ID 입력', ''); //초기값
     alert(id + '가 로그인함');
+
+    localStorage.setItem('id', id);
 
     var passwdSystem = '12345';
     var passwd = prompt('PW 입력', '');
@@ -40,9 +44,9 @@ else{
 // getIdPw();
 
 //함수를 객체로 처리함
-document.querySelector('h1').onclick = function(){ //selector html, h1...
+/* document.querySelector('h1').onclick = function(){ //selector html, h1...
     getIdPw();
-}
+} */
 
 var myImg = document.querySelector('img');
 myImg.onclick = function(){
@@ -54,4 +58,10 @@ myImg.onclick = function(){
     else {
         myImg.setAttribute('src', 'images/firefox-icon.png');
     }
+}
+
+var myButton = document.querySelector('button');
+myButton.onclick = function(){
+    getIdPw();
+    myHeading.innerHTML = id + 'HomePage'
 }
