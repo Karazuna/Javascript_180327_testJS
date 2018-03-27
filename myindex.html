@@ -85,14 +85,20 @@
             // }
             // alert(this.a.z);
 
-            function myFun(arg1, arg2){
-                alert(arguments.length);
-                return 'fun' + arg1 + arg2;
+            // function myFun(arg1, arg2){
+            //     alert(arguments.length);
+            //     return 'fun' + arg1 + arg2;
+            // }
+            // // var name = myFun('1', '2', '1234'); //not error
+            // var name = myFun('x1', 'y2', 'z3');
+            // // alert(name);
+            // alert(myFun.length);//arguement count
+
+            function myFun2(arg1, arg2){
+                alert("arg #" + arguments.length);
+                if (this === myFun2) alert("this === myFun2");
+                return arg1 + arg2;
             }
-            // var name = myFun('1', '2', '1234'); //not error
-            var name = myFun('x1', 'y2', 'z3');
-            // alert(name);
-            alert(myFun.length);//arguement count
 
         </script>
     </body>
