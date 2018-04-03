@@ -43,8 +43,18 @@
         // console.log(myVar);
 
         function Constructor() {}
+
         let myFun = Constructor;
+        console.log(myFun.prototype); // O  (1)-(2)같음 : constructor
+        console.log(myFun.__proto__); // link - native - 더 들어가면 null
+
         let myObj = new Constructor();
+        console.log(myObj.prototype); // X, error
+        console.log(myObj.__proto__); // (2)-(1) 같음 : link, constructor
+
+        
+        
+
 
 
     </script>
